@@ -16,7 +16,7 @@
   \********************/
 /***/ ((__unused_webpack_module, exports, __webpack_require__) => {
 
-eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n\nvar _react = _interopRequireDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar App = function App() {\n  return /*#__PURE__*/_react[\"default\"].createElement(\"h1\", null, \"Hello World AJ .....\");\n};\n\nvar _default = App;\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://shopping-cart/./src/App.js?");
+eval("\n\nObject.defineProperty(exports, \"__esModule\", ({\n  value: true\n}));\nexports[\"default\"] = void 0;\n\nvar _react = _interopRequireDefault(__webpack_require__(/*! react */ \"./node_modules/react/index.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { \"default\": obj }; }\n\nvar App = function App() {\n  return /*#__PURE__*/_react[\"default\"].createElement(\"h1\", null, \"Hello World AJ .........\");\n};\n\nvar _default = App;\nexports[\"default\"] = _default;\n\n//# sourceURL=webpack://shopping-cart/./src/App.js?");
 
 /***/ }),
 

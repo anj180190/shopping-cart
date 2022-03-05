@@ -2,11 +2,25 @@
   "name": "shopping-cart",
   "version": "1.0.0",
   "description": "an shopping cart",
+  "private":true,
   "main": "index.js",
   "scripts": {
-    "start":"webpack serve",
-    "build":"webpack",
+    "start": "webpack --watch",
+    "build": "webpack",
+    "prettier":"prettier --config ./.prettierrc \"src/**/*{.jsx,.js,.json}\"",
+    "eslint":"eslint . --ext .js,.jsx",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "husky":{
+    "hooks":{
+      "commit-msg":"commitlint -E HUSKY_GIT_PARAMS",
+      "pre-commit":"npm run eslint && npm run build && git add ."
+    }
+  },
+  "commitlint":{
+    "extends":[
+      "@commitlint/config-conventional"
+    ]
   },
   "author": "Ashish jogi",
   "license": "ISC",
@@ -18,8 +32,20 @@
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@commitlint/cli": "^16.2.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "babel-eslint": "^10.1.0",
     "babel-loader": "^8.2.3",
+    "eslint": "^8.10.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.29.3",
     "html-webpack-plugin": "^5.5.0",
+    "husky": "^7.0.4",
+    "prettier": "^2.5.1",
     "webpack": "^5.68.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.4"
